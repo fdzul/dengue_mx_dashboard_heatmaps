@@ -2479,5 +2479,606 @@ densnv::mp_heatmap(locality = "San Blas",
 </body>
 </html>
 
+### [**25 Sinaloa**]{style="color:#990000"}
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Culiacán
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r culiacan_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Culiacan de Rosales",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 12,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r culiacan_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Culiacan de Rosales",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 12,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+
+::: grid-item1
+```{r culiacan_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Culiacan de Rosales",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 12,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Mazatlan
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r mazatlan_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Mazatlan",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 12,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r mazatlan_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Mazatlan",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 12,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+
+::: grid-item1
+```{r mazatlan_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Mazatlan",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 12,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
+
+
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Escuinapa
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r escuinapa_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Escuinapa de Hidalgo",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 15,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r escuinapa_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Escuinapa de Hidalgo",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 15,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r escuinapa_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Escuinapa de Hidalgo",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 15,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
+
+</body>
+</html>
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Guamuchil
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r guamuchil_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Guamuchil",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r guamuchil_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Guamuchil",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r guamuchil_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Guamuchil",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
+
+</body>
+</html>
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Guasave
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r guasave_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Guasave",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 13,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r guasave_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Guasave",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 13,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r guasave_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "guasave",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 13,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
+
+</body>
+</html>
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Los Mochis
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r mochis_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Los Mochis",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 13,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r mochis_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Los Mochis",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 13,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r mochis_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Los Mochis",
+                   cve_edo = "25",
+                   geocoded_datasets = z,
+                   zoom = 13,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
 
 :::
