@@ -2779,6 +2779,615 @@ densnv::mp_heatmap(locality = "San Blas",
 </body>
 </html>
 
+
+### [**19 Nuevo León**]{style="color:#990000"}
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Área Metropolitana de Monterrey
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r mty_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = c("Ciudad General Escobedo", "Ciudad Apodaca",
+                                "Guadalupe", "Monterrey", "Ciudad Santa Catarina",
+                                "San Pedro Garza García", "Ciudad Benito Juárez",
+                                "San Nicolás de los Garza", "Montebello",
+                                "Ciudad Sabinas"),
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 11,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r mty_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = c("Ciudad General Escobedo", "Ciudad Apodaca",
+                                "Guadalupe", "Monterrey", "Ciudad Santa Catarina",
+                                "San Pedro Garza García", "Ciudad Benito Juárez",
+                                "San Nicolás de los Garza", "Montebello",
+                                "Ciudad Sabinas"),
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 11,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+
+::: grid-item1
+```{r mty_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = c("Ciudad General Escobedo", "Ciudad Apodaca",
+                                "Guadalupe", "Monterrey", "Ciudad Santa Catarina",
+                                "San Pedro Garza García", "Ciudad Benito Juárez",
+                                "San Nicolás de los Garza", "Montebello",
+                                "Ciudad Sabinas"),
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 11,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Cadereyta Jimenez
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r cadereyta_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Cadereyta Jimenez",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r cadereyta_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality =  "Cadereyta Jimenez",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+
+::: grid-item1
+```{r cadereyta_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Cadereyta Jimenez",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Ciudad de Allende
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r cd_allende_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Ciudad de Allende",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r cd_allende_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Ciudad de Allende",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+
+::: grid-item1
+```{r cd_allende_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Ciudad de Allende",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Linares
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r linares_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Linares",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r linares_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Linares",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+
+::: grid-item1
+```{r linares_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Linares",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Montemorelos
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r montemorelos_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Montemorelos",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 13,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r montemorelos_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Montemorelos",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 13,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+
+::: grid-item1
+```{r montemorelos_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Montemorelos",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 13,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
+
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Santiago
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r santiago_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Santiago",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 12,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r santiago_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Santiago",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 12,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+
+::: grid-item1
+```{r santiago_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Santiago",
+                   cve_edo = "19",
+                   geocoded_datasets = z,
+                   zoom = 12,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
+
 ### [**25 Sinaloa**]{style="color:#990000"}
 
 <html>
