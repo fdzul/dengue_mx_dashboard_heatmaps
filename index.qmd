@@ -1,0 +1,270 @@
+---
+title: "Programa de Prevención y Control del Dengue | 2024"
+format: 
+  dashboard:
+    scrolling: true
+    logo: https://www.gob.mx/cms/uploads/action_program/main_image/26942/post_post_portadavectores.gif
+    nav-buttons: [twitter, github, facebook]
+theme: custom.scss
+---
+
+```{r setup}
+library(sf)
+mapview::mapviewOptions(default = TRUE,
+                        basemaps.color.shuffle = FALSE)
+load("/Users/fdzul/Library/CloudStorage/OneDrive-Personal/proyects/geocoding_mex/2024/8.RData/denmex_2024.RData")
+```
+
+# [**Mapas de Calor**]{style="font-size:8pt"}
+
+::: panel-tabset
+
+### [**18 Nayarit**]{style="color:#990000"}
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 5px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align-last: center;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h1>
+</h1>
+<p>
+</p>
+
+::: grid-container
+
+::: grid-item
+Localidad 
+:::
+
+::: grid-item
+Acumulado
+:::
+
+::: grid-item
+Ultimo Mes
+:::
+
+::: grid-item
+Ultimas 2 Semanas
+:::
+
+::: grid-item
+Tepic
+:::
+
+::: grid-item
+```{r tepic_acumulado}
+#| echo: false
+#| output: true
+# Step 1. load the dengue dataset geocoded ####
+load("/Users/fdzul/Library/CloudStorage/OneDrive-Personal/proyects/geocoding_mex/2024/8.RData/denmex_2024.RData")
+
+########
+densnv::mp_heatmap(locality = c("Tepic", "Xalisco"),
+                        cve_edo = "18",
+                        geocoded_datasets = z,
+                        zoom = 13,
+                        status_caso = c(1, 2),
+                        week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                        alpha = 0.2,
+                        static = TRUE,
+                        map_type = "satellite")
+```
+
+:::
+
+::: grid-item
+```{r tepic_ultimo_mes}
+#| echo: false
+#| output: true
+# Step 1. load the dengue dataset geocoded ####
+
+########
+densnv::mp_heatmap(locality = c("Tepic", "Xalisco"),
+                        cve_edo = "18",
+                        geocoded_datasets = z,
+                        zoom = 13,
+                        status_caso = c(1, 2),
+                        week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                        alpha = 0.2,
+                        static = TRUE,
+                        map_type = "satellite")
+```
+
+:::
+
+::: grid-item
+```{r tepic_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+# Step 1. load the dengue dataset geocoded ####
+
+########
+densnv::mp_heatmap(locality = c("Tepic", "Xalisco"),
+                        cve_edo = "18",
+                        geocoded_datasets = z,
+                        zoom = 13,
+                        status_caso = c(1, 2),
+                        week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                        alpha = 0.2,
+                        static = TRUE,
+                        map_type = "satellite")
+```
+
+:::
+
+::: grid-item
+Bahía de Banderas
+:::
+
+
+::: grid-item
+```{r bahia_acumulado}
+#| echo: false
+#| output: true
+# Step 1. load the dengue dataset geocoded ####
+########
+densnv::mp_heatmap(locality = "Bahia de Banderas",
+                        cve_edo = "18",
+                        geocoded_datasets = z,
+                        zoom = 16,
+                        status_caso = c(1, 2),
+                        week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                        alpha = 0.2,
+                        static = TRUE,
+                        map_type = "satellite")
+```
+
+:::
+
+::: grid-item
+```{r bahia_ultimo_mes, error=FALSE}
+#| echo: false
+#| output: true
+# Step 1. load the dengue dataset geocoded ####
+########
+densnv::mp_heatmap(locality = "Bahia de Banderas",
+                        cve_edo = "18",
+                        geocoded_datasets = z,
+                        zoom = 16,
+                        status_caso = c( 2),
+                        week = seq(from = lubridate::epiweek(Sys.Date())-4, 
+                                   to = lubridate::epiweek(Sys.Date()), 
+                                   by = 1),
+                        alpha = 0.2,
+                        static = TRUE,
+                        map_type = "satellite")
+```
+
+:::
+
+::: grid-item
+```{r bahia_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+# Step 1. load the dengue dataset geocoded ####
+########
+densnv::mp_heatmap(locality = "Bahia de Banderas",
+                        cve_edo = "18",
+                        geocoded_datasets = z,
+                        zoom = 16,
+                        status_caso = c( 2),
+                        week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                        alpha = 0.2,
+                        static = TRUE,
+                        map_type = "satellite")
+```
+
+:::
+
+::: grid-item
+San Blas
+:::
+
+
+::: grid-item
+
+```{r San_blas_acumulado}
+#| echo: false
+#| output: true
+
+########
+densnv::mp_heatmap(locality = "San Blas",
+                        cve_edo = "18",
+                        geocoded_datasets = z,
+                        zoom = 15,
+                        status_caso = c(1, 2),
+                        week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                        alpha = 0.2,
+                        static = TRUE,
+                        map_type = "satellite")
+```
+:::
+
+
+::: grid-item
+
+```{r San_blas_ultimo_mes}
+#| echo: false
+#| output: true
+
+########
+densnv::mp_heatmap(locality = "San Blas",
+                        cve_edo = "18",
+                        geocoded_datasets = z,
+                        zoom = 15,
+                        status_caso = c(1, 2),
+                        week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                        alpha = 0.2,
+                        static = TRUE,
+                        map_type = "satellite")
+```
+:::
+
+
+::: grid-item
+
+```{r San_blas_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+
+########
+densnv::mp_heatmap(locality = "San Blas",
+                        cve_edo = "18",
+                        geocoded_datasets = z,
+                        zoom = 15,
+                        status_caso = c(1, 2),
+                        week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                        alpha = 0.2,
+                        static = TRUE,
+                        map_type = "satellite")
+```
+:::
+
+
+
+:::
+
+</body>
+</html>
+
+
+:::
