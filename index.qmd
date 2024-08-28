@@ -19,6 +19,306 @@ load("/Users/fdzul/Library/CloudStorage/OneDrive-Personal/proyects/geocoding_mex
 
 ::: panel-tabset
 
+### [**O6 Colima**]{style="color:#990000"}
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Área Metropolitana de Colima
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r colima_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = c("Colima", 
+                                "Ciudad de Villa Alvarez"),
+                   cve_edo = "06",
+                   geocoded_datasets = z,
+                   zoom = 13,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r colima_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = c("Colima", 
+                                "Ciudad de Villa Alvarez"),
+                   cve_edo = "06",
+                   geocoded_datasets = z,
+                   zoom = 13,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+
+::: grid-item1
+```{r colima_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = c("Colima", 
+                                "Ciudad de Villa Alvarez"),
+                   cve_edo = "06",
+                   geocoded_datasets = z,
+                   zoom = 13,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Tecomán
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r tecoman_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Tecomán",
+                   cve_edo = "06",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r tecoman_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Tecomán",
+                   cve_edo = "06",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+
+::: grid-item1
+```{r tecoman_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Tecoman",
+                   cve_edo = "06",
+                   geocoded_datasets = z,
+                   zoom = 14,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h4>
+Manzanillo
+</h4>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+Acumulado
+:::
+
+::: grid-item1
+Último Mes
+:::
+
+::: grid-item1
+Últimas 2 Semanas
+:::
+
+
+::: grid-item1
+```{r manzanillo_acumulado}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Manzanillo",
+                   cve_edo = "06",
+                   geocoded_datasets = z,
+                   zoom = 12,
+                   status_caso = c(1, 2),
+                   week = seq(from = 1, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+::: grid-item1
+```{r manzanillo_ultimo_mes}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Manzanillo",
+                   cve_edo = "06",
+                   geocoded_datasets = z,
+                   zoom = 12,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-4, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+```
+:::
+
+
+::: grid-item1
+```{r manzanillo_ultimas_dos_semanas}
+#| echo: false
+#| output: true
+densnv::mp_heatmap(locality = "Manzanillo",
+                   cve_edo = "06",
+                   geocoded_datasets = z,
+                   zoom = 12,
+                   status_caso = c(1, 2),
+                   week = seq(from = lubridate::epiweek(Sys.Date())-2, to = lubridate::epiweek(Sys.Date()), by = 1),
+                   alpha = 0.2,
+                   static = TRUE,
+                   map_type = "satellite")
+
+```
+:::
+
+
+:::
+
+</body>
+</html>
+
 
 ### [**11 Guanajuato**]{style="color:#990000"}
 
